@@ -1,0 +1,47 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<todoitems>
+    <item 
+	    id="0"
+	    title="Stek wolowy 200g (antrykot), frytki, warzywa na parze, dip" 
+	    pic="pic10.png"/>
+    <item 
+	    id="1"
+	    title="Poledwica wieprzowa 140g, sos grzybowy, puree z buraka, marchew blanszowana" 
+	    pic="pic11.png"/>
+    <item 
+	    id="2"
+	    title="Kotlet schabowy z koscia 200g, ziemniaki pieczone, kapusta czerwona zasmazana" 
+	    pic="pic12.png"/>
+  <item 
+	    id="3"
+	    title="Piers z kurczaka 200g, kasza gryczana, sos zurawina, kostka z buraka" 
+	    pic="pic10.png"/>
+    <item 
+	    id="4"
+	    title="Stek drobiowy 200g, zapeikany serem plesniowym, mus sliwkowy, puree ziemniczane z orzechami" 
+	    pic="pic11.png"/>
+    <item 
+	    id="5"
+	    title="Piers z kurczaka 200g w panierce orzechowej, kasza kus-kus, salatka z pomidora i ogorka" 
+	    pic="pic12.png"/>
+    <item 
+	    id="6"
+	    title="Pstrag smazony z migdalami 250g, grzanki, salata" 
+	    pic="pic10.png"/><item 
+	    id="7"
+	    title="Filet z lososia 200g, puree ziemniaczane z orzechami, sos szpinakowy" 
+	    pic="pic10.png"/><item 
+	    id="8"
+	    title="Dla dzieci: Piers z kurczaka 100g, panierowana, frytki, marchew blanszowana" 
+	    pic="pic10.png"/><item 
+	    id="9"
+	    title="Dla dzieci: Filet z piersi kurczaka 100g, ryz, warzywa para, sos" 
+	    pic="pic10.png"/><item 
+	    id="10"
+	    title="Piers z kurczaka w szynce szwarcwaldzkiej, parmeza, sos tymiankowy, kasza kus-kus na soku z buraka, warzywa na patelni" 
+	    pic="pic10.png"/><item 
+	    id="11"
+	    title="Camembert z lubczykiem 150g w sosie z granatu, salatka z dressingiem, frytki" 
+	    pic="pic10.png"/>
+
+</todoitems>

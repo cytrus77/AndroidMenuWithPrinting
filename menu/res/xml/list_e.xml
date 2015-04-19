@@ -1,0 +1,21 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<todoitems>
+    <item 
+	    id="0"
+	    title="Tarta czekoladowa" 
+	    pic="pic10.png"/>
+    <item 
+	    id="1"
+	    title="Tarta z musem z bialej czekolady z owocami" 
+	    pic="pic11.png"/><item 
+	    id="2"
+	    title="Deser lodowy (3 galki), owoce, bita smietana" 
+	    pic="pic11.png"/><item 
+	    id="3"
+	    title="Gorace maliny z lodami, bita smietana" 
+	    pic="pic11.png"/><item 
+	    id="4"
+	    title="Mus gruszkowo-jablkowy z beza" 
+	    pic="pic11.png"/>
+
+</todoitems>

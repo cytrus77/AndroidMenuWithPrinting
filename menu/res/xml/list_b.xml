@@ -1,0 +1,27 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<todoitems>
+    <item 
+	    id="0"
+	    title="Losos gravlax" 
+	    pic="pic04.png"/>
+    <item 
+	    id="1"
+	    title="Ceasar salat" 
+	    pic="pic05.png"/>
+    <item 
+	    id="2"
+	    title="Zupa dnia" 
+	    pic="pic06.png"/>
+	<item 
+	    id="3"
+	    title="Forszmak" 
+	    pic="pic04.png"/>
+    <item 
+	    id="4"
+	    title="Krem z selera, chipsy z boczku" 
+	    pic="pic05.png"/><item 
+	    id="5"
+	    title="Czernina" 
+	    pic="pic05.png"/>
+	
+</todoitems>

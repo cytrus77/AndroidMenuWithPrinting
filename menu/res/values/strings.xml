@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Restauracja u Bielawnego</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Ustawienia</string>
+    <string name="title_activity_main">Restauracja u Bielawnego</string>
+    <string name="text_hoes_here_lol">Witaj w restauracji u Bielawnego!</string>
+    <string name="menu_display_image">whaddaya want buuub?</string>
+    <string name="add_to_my_menu_">Dodaj do zamówienia.</string>
+
+</resources>

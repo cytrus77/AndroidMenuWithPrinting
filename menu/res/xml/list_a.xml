@@ -1,0 +1,25 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<todoitems>
+    <item 
+	    id="0"
+	    title="Jajecznica na szynce" 
+	    pic="pic01.png"/>
+    <item 
+	    id="1"
+	    title="Jajecznica na boczku" 
+	    pic="pic02.png"/>
+    <item 
+	    id="2"
+	    title="Jajecznica na masle" 
+	    pic="pic03.png"/>
+    
+	<item 
+	    id="3"
+	    title="Pieczywo" 
+	    pic="pic01.png"/>
+    <item 
+	    id="4"
+	    title="Maslo" 
+	    pic="pic02.png"/>
+
+</todoitems>
