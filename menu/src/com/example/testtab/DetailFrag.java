@@ -262,7 +262,7 @@ public class DetailFrag extends Fragment {
                 {	
                 	if(comments[i].length()>1) comments[i] = "[" + comments[i] + "]";
                 	stringLength = myitemlist.get(i).title.length()+comments[i].length()+3;
-                   	paragon = paragon + myitemlist.get(i).title + comments[i];
+                   	paragon = paragon + myitemlist.get(i).title + " " + comments[i];
                    	if(stringLength%32<29)
                    		for(int j=0;j<(32-(stringLength%32))-3;j++)
                    		{	

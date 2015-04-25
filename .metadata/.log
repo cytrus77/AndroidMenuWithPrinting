@@ -3575,3 +3575,162 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2015-04-19 12:05:17.950 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pl_PL
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 4 0 2015-04-19 12:05:37.559
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.egit.ui [143]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.egit.ui [osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="3.4.0.201406110918-r"; singleton:="true"] because it is exposed to package 'com.jcraft.jsch' from resources com.jcraft.jsch [osgi.identity; osgi.identity="com.jcraft.jsch"; type="osgi.bundle"; version:Version="0.1.51.v201410302000"] and com.jcraft.jsch [osgi.identity; osgi.identity="com.jcraft.jsch"; type="osgi.bundle"; version:Version="0.1.46.v201205102330"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.egit.ui [osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="3.4.0.201406110918-r"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=com.jcraft.jsch)(&(bundle-version>=0.1.37)(!(bundle-version>=0.2.0))))
+     |
+    provide: osgi.wiring.bundle: com.jcraft.jsch
+  com.jcraft.jsch [osgi.identity; osgi.identity="com.jcraft.jsch"; type="osgi.bundle"; version:Version="0.1.51.v201410302000"]
+
+Chain 2:
+  org.eclipse.egit.ui [osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="3.4.0.201406110918-r"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.eclipse.jgit.transport)(&(version>=3.4.0)(!(version>=3.5.0))))
+     |
+    export: osgi.wiring.package=org.eclipse.jgit.transport; uses:=null
+  org.eclipse.jgit [osgi.identity; osgi.identity="org.eclipse.jgit"; type="osgi.bundle"; version:Version="3.4.0.201406110918-r"]
+    require: (&(osgi.wiring.bundle=com.jcraft.jsch)(&(bundle-version>=0.1.37)(!(bundle-version>=0.2.0))))
+     |
+    provide: osgi.wiring.bundle: com.jcraft.jsch
+  com.jcraft.jsch [osgi.identity; osgi.identity="com.jcraft.jsch"; type="osgi.bundle"; version:Version="0.1.46.v201205102330"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.core 4 0 2015-04-19 12:05:37.684
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.egit.core [446]
+  Another singleton bundle selected: osgi.identity; osgi.identity="org.eclipse.egit.core"; type="osgi.bundle"; version:Version="3.4.0.201406110918-r"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.import 4 0 2015-04-19 12:05:37.700
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.egit.import [448]
+  Unresolved requirement: Import-Package: org.eclipse.egit.core.internal; version="[2.2.0,2.3.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.ui 4 0 2015-04-19 12:05:37.700
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.egit.ui [449]
+  Another singleton bundle selected: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="3.4.0.201406110918-r"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-04-19 12:05:37.715
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.0.100.v20120913-155635 [455]
+]
+Component2: Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.0.v20140408-1354 [191]
+]  
+
+!ENTRY org.eclipse.osgi 2 0 2015-04-19 12:06:50.573
+!MESSAGE While loading class "org.eclipse.cdt.ui.ICHelpProvider", thread "Thread[Worker-4,5,main]" timed out waiting (5013ms) for thread "Thread[Worker-0,5,main]" to finish starting bundle "org.eclipse.cdt.ui_5.9.0.201502131403 [508]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "org.eclipse.cdt.ui.ICHelpProvider" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.cdt.ui"; type="osgi.bundle"; version:Version="5.9.0.201502131403"; singleton:="true" [id=508] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.defineClass(ModuleClassLoader.java:272)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.defineClass(ClasspathManager.java:632)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:588)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:540)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:527)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.linuxtools.internal.cdt.libhover.LibHoverLoadJob.run(LibHoverLoadJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jdt.core 4 0 2015-04-19 12:07:39.190
+!MESSAGE Invalid ZIP archive: C:\Users\Dell\Desktop\AndroidMenuWithPrinting\library\bin\library.jar
